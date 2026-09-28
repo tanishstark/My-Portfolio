@@ -1,7 +1,14 @@
 {
-  "buildCommand": null,
-  "outputDirectory": ".",
+  "version": 2,
+  "outputDirectory": "public",
   "cleanUrls": true,
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/styles.css", "dest": "/styles.css" },
+    { "src": "/script.js", "dest": "/script.js" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

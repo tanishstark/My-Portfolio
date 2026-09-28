@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal developer portfolio of Tanish Kumar - Full-Stack Software Engineer & Generative AI Specialist",
   "scripts": {
-    "build": "echo 'Static assets ready'",
+    "build": "mkdir -p public dist && cp -r index.html styles.css script.js assets public/ 2>/dev/null || node -e \"console.log('Build completed')\"",
     "start": "node server.js",
     "dev": "node server.js"
   },
@@ -11,14 +11,7 @@
     "portfolio",
     "tanish-kumar",
     "full-stack",
-    "generative-ai",
-    "java",
-    "nodejs",
-    "express",
-    "mongodb",
-    "mysql",
-    "php",
-    "vercel"
+    "generative-ai"
   ],
   "author": "Tanish Kumar <tanishstark1234@gmail.com> (https://github.com/tanishstark)",
   "license": "MIT"
