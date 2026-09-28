@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanish Kumar | Full-Stack Software Engineer & Generative AI Specialist</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Tanish Kumar - MCA Candidate specializing in Generative AI, Full-Stack Developer experienced in Java, Node.js, Express, PHP, MySQL, MongoDB, and AI Systems." />
+  <meta name="keywords" content="Tanish Kumar, Portfolio, Full-Stack Developer, Generative AI, Java, Node.js, Express, MongoDB, MySQL, SRM IST, Sarala Birla University, Web Developer Chennai" />
+  <meta name="author" content="Tanish Kumar" />
+  <meta property="og:title" content="Tanish Kumar | Portfolio" />
+  <meta property="og:description" content="Full-Stack Developer & GenAI Specialist building scalable web applications and intelligent systems." />
+  <meta property="og:image" content="assets/tanish_profile.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts & Icon Libraries -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+</head>
+<body>
+  <!-- Ambient Gradient Background & Particle Canvas -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Custom Cursor Glow -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-follower" id="cursor-follower"></div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-symbol">&lt;TK /&gt;</span>
+        <span class="logo-text">Tanish<span class="gradient-text">.dev</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link"><i class="fa-solid fa-user-astronaut"></i> About</a></li>
+          <li><a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
+          <li><a href="#projects" class="nav-link"><i class="fa-solid fa-cubes"></i> Projects</a></li>
+          <li><a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+          <li><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+          <li><a href="#genai-lab" class="nav-link"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Lab</a></li>
+          <li><a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="assets/Tanish_Kumar_Resume.pdf" download="Tanish_Kumar_Resume.pdf" class="btn btn-outline btn-sm">
+          <i class="fa-solid fa-download"></i> Resume
+        </a>
+        <button id="theme-toggle" class="icon-btn" title="Toggle Theme" aria-label="Toggle Color Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>MCA GenAI Candidate &bull; Open for High-Impact Roles</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text glow-text">Tanish Kumar</span>
+          </h1>
+
+          <div class="typewriter-container">
+            <span class="type-prefix">Specialized in</span>
+            <span id="typewriter-text" class="type-dynamic"></span>
+            <span class="cursor-blink">|</span>
+          </div>
+
+          <p class="hero-description">
+            Building robust full-stack applications with <strong>Java, Node.js, Express, MongoDB, MySQL &amp; PHP</strong>, combined with cutting-edge <strong>Generative AI</strong> architectures. Driven by Data Structures, clean software patterns, and solving real-world challenges.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-glass">
+              <span>Get in Touch</span>
+              <i class="fa-solid fa-comments"></i>
+            </a>
+            <a href="https://github.com/tanishstark" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/tanish-kumar-7079a6412/" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+
+          <!-- Quick Quick Stats -->
+          <div class="quick-stats-grid">
+            <div class="stat-card">
+              <span class="stat-number" data-count="12">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Core Tech Skills</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-count="2">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Full-Stack Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-count="100">0</span><span class="stat-plus">%</span>
+              <span class="stat-label">Execution Focus</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="profile-frame">
+            <div class="frame-backdrop"></div>
+            <div class="profile-image-wrapper">
+              <img src="assets/tanish_profile.jpg" alt="Tanish Kumar - Software Engineer" class="profile-img" />
+              <div class="image-overlay-glow"></div>
+            </div>
+
+            <!-- Floating Badges -->
+            <div class="floating-badge badge-top-right">
+              <i class="fa-brands fa-java text-orange"></i>
+              <span>Java &amp; DSA</span>
+            </div>
+            <div class="floating-badge badge-mid-left">
+              <i class="fa-brands fa-node-js text-green"></i>
+              <span>Node.js / Express</span>
+            </div>
+            <div class="floating-badge badge-bottom-right">
+              <i class="fa-solid fa-brain text-purple"></i>
+              <span>Generative AI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About Section">
+        <span>Scroll Down</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ABOUT & INTERACTIVE TERMINAL SECTION -->
+    <section id="about" class="section-padding about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">WHO I AM</span>
+          <h2 class="section-title">Engineering with <span class="gradient-text">Precision &amp; Purpose</span></h2>
+          <p class="section-subtitle">A glimpse into my background, academic excellence, and technical philosophy.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Story Card -->
+          <div class="about-card glass-card">
+            <div class="about-nav-tabs">
+              <button class="tab-btn active" data-tab="story"><i class="fa-solid fa-user"></i> Background</button>
+              <button class="tab-btn" data-tab="focus"><i class="fa-solid fa-microchip"></i> GenAI &amp; CS</button>
+              <button class="tab-btn" data-tab="strengths"><i class="fa-solid fa-award"></i> Core Strengths</button>
+            </div>
+
+            <div class="tab-content active" id="tab-story">
+              <h3>Passionate Software Builder &amp; MCA Scholar</h3>
+              <p>
+                I am an MCA candidate specializing in <strong>Generative AI at SRM Institute of Science and Technology</strong> (Kattankulathur) with a foundational <strong>BCA from Sarala Birla University</strong>. 
+              </p>
+              <p>
+                My expertise spans full-stack web architectures (Node.js, Express, PHP, MongoDB, MySQL) combined with deep core computing fundamentals in <strong>Core Java, OOP, Collections, Multithreading, DSA, and DBMS</strong>.
+              </p>
+              <div class="personal-details-grid">
+                <div class="detail-item">
+                  <span class="detail-label"><i class="fa-solid fa-location-dot"></i> Base:</span>
+                  <span class="detail-val">Chennai, India</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label"><i class="fa-solid fa-envelope"></i> Email:</span>
+                  <span class="detail-val copyable" data-copy="tanishstark1234@gmail.com" title="Click to copy">tanishstark1234@gmail.com</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label"><i class="fa-solid fa-phone"></i> Phone:</span>
+                  <span class="detail-val copyable" data-copy="+919709381583" title="Click to copy">+91 9709381583</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label"><i class="fa-solid fa-language"></i> Languages:</span>
+                  <span class="detail-val">English, Hindi</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content" id="tab-focus">
+              <h3>Next-Gen AI &amp; Robust Backend Systems</h3>
+              <p>
+                My current research and coursework focus heavily on modern <strong>Generative AI pipelines</strong>, LLM orchestration, prompt engineering, and integrating intelligent agents into real-world business applications.
+              </p>
+              <ul class="feature-list">
+                <li><i class="fa-solid fa-check-circle"></i> Seamless integration of AI APIs with backend REST services.</li>
+                <li><i class="fa-solid fa-check-circle"></i> High-performance Java streams, concurrency, and thread-safe data structures.</li>
+                <li><i class="fa-solid fa-check-circle"></i> Relational &amp; NoSQL database schema design with optimized indexing.</li>
+              </ul>
+            </div>
+
+            <div class="tab-content" id="tab-strengths">
+              <h3>Engineering Mindset &amp; Execution</h3>
+              <p>
+                From solo-architecting complete full-stack platforms like <em>Travellers Villa</em> to developing industry e-commerce solutions during my internship, I take pride in end-to-end delivery:
+              </p>
+              <div class="strengths-tags">
+                <span class="strength-tag"><i class="fa-solid fa-shield-halved"></i> Role-Based Auth &amp; Security</span>
+                <span class="strength-tag"><i class="fa-solid fa-map-location-dot"></i> Geo-Spatial &amp; Map APIs</span>
+                <span class="strength-tag"><i class="fa-solid fa-database"></i> High-Integrity CRUD &amp; Schema Design</span>
+                <span class="strength-tag"><i class="fa-solid fa-trophy"></i> Hackathon &amp; Problem Solving</span>
+                <span class="strength-tag"><i class="fa-solid fa-video"></i> Tech Communication &amp; Media</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive CLI Terminal -->
+          <div class="terminal-card glass-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">tanish@portfolio-shell: ~</div>
+              <div class="terminal-hint">Interactive CLI</div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+              <p class="terminal-output text-muted">Welcome to Tanish Kumar's interactive terminal! Type a command or click one of the quick shortcuts below.</p>
+              <div class="terminal-history" id="terminal-history"></div>
+              <div class="terminal-input-row">
+                <span class="prompt-symbol">tanish@dev:~$</span>
+                <input type="text" id="terminal-input" placeholder="Type 'help', 'skills', 'projects', 'contact'..." autocomplete="off" spellcheck="false" />
+              </div>
+            </div>
+            <div class="terminal-quick-cmds">
+              <span class="quick-title">Quick Run:</span>
+              <button class="quick-cmd-btn" data-cmd="skills">skills</button>
+              <button class="quick-cmd-btn" data-cmd="projects">projects</button>
+              <button class="quick-cmd-btn" data-cmd="education">education</button>
+              <button class="quick-cmd-btn" data-cmd="sudo hire">sudo hire</button>
+              <button class="quick-cmd-btn" data-cmd="clear">clear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section id="skills" class="section-padding skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">COMPETENCIES</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skill Arsenal</span></h2>
+          <p class="section-subtitle">A comprehensive breakdown of my programming languages, frameworks, databases, and AI tooling.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skills-filter">
+          <button class="filter-btn active" data-filter="all">All Disciplines</button>
+          <button class="filter-btn" data-filter="languages">Languages</button>
+          <button class="filter-btn" data-filter="cs-java">Java &amp; Core CS</button>
+          <button class="filter-btn" data-filter="web-backend">Web &amp; Backend</button>
+          <button class="filter-btn" data-filter="databases">Databases</button>
+          <button class="filter-btn" data-filter="ai-genai">AI &amp; GenAI</button>
+          <button class="filter-btn" data-filter="tools">Dev Tools</button>
+        </div>
+
+        <div class="skills-grid" id="skills-grid">
+          <!-- Java -->
+          <div class="skill-card glass-card" data-category="languages cs-java">
+            <div class="skill-icon-wrap bg-orange-glow">
+              <i class="fa-brands fa-java"></i>
+            </div>
+            <div class="skill-info">
+              <h4>Core Java &amp; OOP</h4>
+              <p>Collections, Streams, Multithreading, Exception &amp; File Handling</p>
+            </div>
+            <div class="skill-meter">
+              <div class="meter-bar" style="--level: 90%;"></div>
+            </div>
+            <span class="skill-badge">Advanced</span>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card glass-card" data-category="languages web-backend">
+            <div class="skill-icon-wrap bg-yellow-glow">
+              <i class="fa-brands fa-js"></i>
+            </div>
+            <div class="skill-info">
+              <h4>JavaScript (ES6+)</h4>
+              <p>Async/Await, DOM manipulation, REST integration, Event loop</p>
+            </div>
+            <div class="skill-meter">
+              <div class="meter-bar" style="--level: 90%;"></div>
+            </div>
+            <span class="skill-badge">Proficient</span>
+          </div>
+
+          <!-- Node.js & Express -->
+          <div class="skill-card glass-card" data-category="web-backend">
+            <div class="skill-icon-wrap bg-green-glow">
+              <i class="fa-brands fa-node-js"></i>
+            </div>
+            <div class="skill-info">
+              <h4>Node.js &amp; Express.js</h4>
+              <p>RESTful APIs, JWT Authentication, Middleware, MVC architecture</p>
+            </div>
+            <div class="skill-meter">
+              <div class="meter-bar" style="--level: 88%;"></div>
+            </div>
+            <span class="skill-badge">Proficient</span>
+          </div>
+
+          <!-- SQL & Relational Databases -->
+          <div class="skill-card glass-card" data-category="languages databases cs-java">
+            <div class="skill-icon-wrap bg-blue-glow">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <div class="skill-info">
+              <h4>SQL &amp; MySQL</h4>
+              <p>Complex queries, joins, relational schema design, indexing &amp; DBMS</p>
+            </div>
+            <div class="skill-meter">
+              <div class="meter-bar" style="--level: 85%;"></div>
+            </div>
+            <span class="skill-badge">Proficient</span>
+          </div>
+
+          <!-- MongoDB -->
+          <div class="skill-card glass-card" data-category="databases web-backend">
+            <div class="skill-icon-wrap bg-emerald-glow">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div class="skill-info">
+              <h4>MongoDB &amp; Mongoose</h4>
+              <p>Document models, aggregation pipelines, schema validation</p>
+            </div>
+            <div class="skill-meter">
+              <div class="meter-bar" style="--level: 85%;"></div>
+            </div>
+            <span class="skill-badge">Proficient</span>
+          </div>
+
+          <!-- PHP -->
+          <div class="skill-card glass-card" data-category="web-backend languages">
+            <div class="skill-icon-wrap bg-indigo-glow">
+              <i class="fa-brands fa-php"></i>
+            </div>
+            <div class="skill-info">
+              <h4>PHP &amp; Backend Dev</h4>
+              <p>Server-side logic, session handling, database integrations</p>
+            </div>
+            <div class="skill-meter">
+              <div class="meter-bar" style="--level: 80%;"></div>
+            </div>
+            <span class="skill-badge">Intermediate</span>
+          </div>
+
+          <!-- Generative AI -->
+          <div class="skill-card glass-card" data-category="ai-genai">
+            <div class="skill-icon-wrap bg-purple-glow">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <div class="skill-info">
+              <h4>Generative AI &amp; LLMs</h4>
+              <p>GenAI fundamentals, Prompt engineering, AI/ML basics &amp; API wrappers</p>
+            </div>
+            <div class="skill-meter">
+              <div class="meter-bar" style="--level: 85%;"></div>
+            </div>
+            <span class="skill-badge">Specialization</span>
+          </div>
+
+          <!-- Python (Basic) -->
+          <div class="skill-card glass-card" data-category="languages ai-genai">
+            <div class="skill-icon-wrap bg-cyan-glow">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <div class="skill-info">
+              <h4>Python (Foundational)</h4>
+              <p>Scripting, AI/ML workflows, automation, data handling</p>
+            </div>
+            <div class="skill-meter">
+              <div class="meter-bar" style="--level: 70%;"></div>
+            </div>
+            <span class="skill-badge">Foundational</span>
+          </div>
+
+          <!-- Computer Science Fundamentals -->
+          <div class="skill-card glass-card" data-category="cs-java">
+            <div class="skill-icon-wrap bg-violet-glow">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <div class="skill-info">
+              <h4>DSA, OS &amp; Networks</h4>
+              <p>Data Structures, Algorithms, Operating Systems, Networking protocols</p>
+            </div>
+            <div class="skill-meter">
+              <div class="meter-bar" style="--level: 88%;"></div>
+            </div>
+            <span class="skill-badge">Core CS</span>
+          </div>
+
+          <!-- HTML5, CSS3 & Bootstrap -->
+          <div class="skill-card glass-card" data-category="web-backend">
+            <div class="skill-icon-wrap bg-red-glow">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="skill-info">
+              <h4>HTML5, CSS3 &amp; Bootstrap</h4>
+              <p>Responsive design, modern CSS grid/flexbox, animations, UI styling</p>
+            </div>
+            <div class="skill-meter">
+              <div class="meter-bar" style="--level: 92%;"></div>
+            </div>
+            <span class="skill-badge">Expertise</span>
+          </div>
+
+          <!-- Git & GitHub -->
+          <div class="skill-card glass-card" data-category="tools">
+            <div class="skill-icon-wrap bg-slate-glow">
+              <i class="fa-brands fa-git-alt"></i>
+            </div>
+            <div class="skill-info">
+              <h4>Git &amp; GitHub Version Control</h4>
+              <p>Branching, PRs, collaborative workflows, CI/CD, repo management</p>
+            </div>
+            <div class="skill-meter">
+              <div class="meter-bar" style="--level: 90%;"></div>
+            </div>
+            <span class="skill-badge">Essential</span>
+          </div>
+
+          <!-- Tools: VS Code & Vercel -->
+          <div class="skill-card glass-card" data-category="tools">
+            <div class="skill-icon-wrap bg-teal-glow">
+              <i class="fa-solid fa-terminal"></i>
+            </div>
+            <div class="skill-info">
+              <h4>VS Code &amp; Vercel Deployment</h4>
+              <p>Debugging, extensions, serverless hosting, environment config</p>
+            </div>
+            <div class="skill-meter">
+              <div class="meter-bar" style="--level: 90%;"></div>
+            </div>
+            <span class="skill-badge">Workflow</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SHOWCASE -->
+    <section id="projects" class="section-padding projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">FEATURED WORK</span>
+          <h2 class="section-title">Engineered <span class="gradient-text">Projects &amp; Solutions</span></h2>
+          <p class="section-subtitle">Real-world applications built from scratch with comprehensive backends, authentication, and database schemas.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- PROJECT 1: Travellers Villa -->
+          <article class="project-card glass-card">
+            <div class="project-image-container">
+              <img src="assets/travellers_villa.jpg" alt="Travellers Villa - Full Stack Hotel Booking Platform" class="project-img" />
+              <div class="project-tag-floating">Solo Full-Stack Project</div>
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm open-modal-btn" data-project="travellers-villa">
+                  <i class="fa-solid fa-eye"></i> Deep Dive
+                </button>
+                <a href="https://github.com/tanishstark" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-category"><i class="fa-solid fa-hotel"></i> Travel &amp; Hospitality Tech</span>
+                <span class="project-stack-pills">Node.js &bull; Express &bull; MongoDB</span>
+              </div>
+
+              <h3 class="project-title">Travellers Villa</h3>
+              <p class="project-desc">
+                A full-scale hotel booking and resort discovery platform. Includes complete user authentication, interactive map location services, hotel reservation cart workflow, user review moderation, and a dedicated admin management portal.
+              </p>
+
+              <div class="project-feature-highlights">
+                <span class="feat-badge"><i class="fa-solid fa-lock"></i> Role-Based Auth</span>
+                <span class="feat-badge"><i class="fa-solid fa-map-pin"></i> Map API Geolocation</span>
+                <span class="feat-badge"><i class="fa-solid fa-sliders"></i> Admin Control Panel</span>
+                <span class="feat-badge"><i class="fa-solid fa-star"></i> Verified Reviews System</span>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">REST APIs</span>
+                <span class="tech-tag">Map API</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+
+              <div class="project-footer-actions">
+                <button class="btn-text open-modal-btn" data-project="travellers-villa">
+                  Explore Architecture &amp; Features <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <a href="https://github.com/tanishstark" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Repo">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Book Harbor -->
+          <article class="project-card glass-card">
+            <div class="project-image-container">
+              <img src="assets/book_harbor.jpg" alt="Book Harbor - E-Commerce Platform" class="project-img" />
+              <div class="project-tag-floating">Full-Stack E-Commerce</div>
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm open-modal-btn" data-project="book-harbor">
+                  <i class="fa-solid fa-eye"></i> Deep Dive
+                </button>
+                <a href="https://github.com/tanishstark" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-category"><i class="fa-solid fa-book-open"></i> E-Commerce Architecture</span>
+                <span class="project-stack-pills">PHP &bull; MySQL &bull; JavaScript</span>
+              </div>
+
+              <h3 class="project-title">Book Harbor</h3>
+              <p class="project-desc">
+                An end-to-end e-commerce online bookstore for buying and reviewing books across multi-genre catalogs. Built with dynamic genre filtering, real-time live search, interactive cart system, customer feedback channels, and robust relational MySQL schema.
+              </p>
+
+              <div class="project-feature-highlights">
+                <span class="feat-badge"><i class="fa-solid fa-magnifying-glass"></i> Live Search &amp; Filter</span>
+                <span class="feat-badge"><i class="fa-solid fa-cart-shopping"></i> Cart &amp; Order Checkout</span>
+                <span class="feat-badge"><i class="fa-solid fa-database"></i> MySQL Relational Schema</span>
+                <span class="feat-badge"><i class="fa-solid fa-layer-group"></i> Dynamic Category Pages</span>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML5/CSS3</span>
+                <span class="tech-tag">Bootstrap</span>
+              </div>
+
+              <div class="project-footer-actions">
+                <button class="btn-text open-modal-btn" data-project="book-harbor">
+                  Explore Architecture &amp; Features <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <a href="https://github.com/tanishstark" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Repo">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: GenAI Intelligence Suite -->
+          <article class="project-card glass-card">
+            <div class="project-image-container">
+              <img src="assets/genai_showcase.jpg" alt="Generative AI & LLM Systems Showcase" class="project-img" />
+              <div class="project-tag-floating">AI Research &amp; GenAI Specialization</div>
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm open-modal-btn" data-project="genai-suite">
+                  <i class="fa-solid fa-eye"></i> Deep Dive
+                </button>
+                <a href="https://github.com/tanishstark" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-category"><i class="fa-solid fa-wand-magic-sparkles"></i> MCA Specialization Project</span>
+                <span class="project-stack-pills">GenAI &bull; Prompt Engineering &bull; LLM APIs</span>
+              </div>
+
+              <h3 class="project-title">Synthesis GenAI Suite</h3>
+              <p class="project-desc">
+                An intelligent dashboard demonstrating context-aware LLM pipelines, prompt templates, and autonomous agent orchestration. Highlights how generative models can integrate with web backends to power natural language workflows.
+              </p>
+
+              <div class="project-feature-highlights">
+                <span class="feat-badge"><i class="fa-solid fa-robot"></i> Contextual Agents</span>
+                <span class="feat-badge"><i class="fa-solid fa-bolt"></i> Realtime Prompt Playground</span>
+                <span class="feat-badge"><i class="fa-solid fa-code-merge"></i> Multi-Model API Bridge</span>
+                <span class="feat-badge"><i class="fa-solid fa-chart-line"></i> Token &amp; Latency Analytics</span>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tech-tag">Generative AI</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">LLM Orchestration</span>
+                <span class="tech-tag">REST APIs</span>
+              </div>
+
+              <div class="project-footer-actions">
+                <button class="btn-text open-modal-btn" data-project="genai-suite">
+                  Explore Architecture &amp; Features <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <a href="https://github.com/tanishstark" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Repo">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE GENAI PLAYGROUND DEMO -->
+    <section id="genai-lab" class="section-padding genai-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">INTERACTIVE SHOWCASE</span>
+          <h2 class="section-title">Generative AI <span class="gradient-text">Interactive Assistant</span></h2>
+          <p class="section-subtitle">Experience my specialization in action. Ask questions about my experience, tech stack, or projects!</p>
+        </div>
+
+        <div class="ai-assistant-wrapper glass-card">
+          <div class="ai-assistant-header">
+            <div class="ai-avatar">
+              <i class="fa-solid fa-sparkles"></i>
+            </div>
+            <div class="ai-header-info">
+              <h4>Tanish's AI Career Assistant</h4>
+              <span class="ai-status">🟢 Powered by GenAI Knowledge Base &bull; Online</span>
+            </div>
+            <div class="ai-model-badge">Model: TK-GenAI-v2.5</div>
+          </div>
+
+          <div class="ai-chat-messages" id="ai-chat-messages">
+            <div class="ai-msg bot">
+              <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
+              <div class="msg-bubble">
+                <p>Hello! I am Tanish Kumar's portfolio AI assistant. Feel free to ask me anything about his technical skills in Java, Node.js, and GenAI, or click one of the suggested prompts below!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-suggestions">
+            <button class="ai-suggest-btn" data-prompt="What are Tanish's primary backend skills?">What are Tanish's backend skills?</button>
+            <button class="ai-suggest-btn" data-prompt="Tell me about the Travellers Villa project.">Tell me about Travellers Villa</button>
+            <button class="ai-suggest-btn" data-prompt="What is Tanish's educational background in GenAI?">What is Tanish's education?</button>
+            <button class="ai-suggest-btn" data-prompt="How can I contact Tanish for opportunities?">How to contact Tanish?</button>
+          </div>
+
+          <form id="ai-chat-form" class="ai-chat-input-bar">
+            <input type="text" id="ai-input" placeholder="Ask a question about Tanish's resume and capabilities..." autocomplete="off" />
+            <button type="submit" class="btn btn-primary btn-icon" title="Send Prompt">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION TIMELINE -->
+    <section id="experience" class="section-padding timeline-section">
+      <div class="container">
+        <div class="timeline-dual-grid">
+          <!-- WORK EXPERIENCE -->
+          <div class="timeline-column">
+            <div class="column-header">
+              <div class="col-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <h3>Professional Experience</h3>
+            </div>
+
+            <div class="timeline-list">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content glass-card">
+                  <div class="timeline-badge-date">May 26, 2025 &ndash; July 12, 2025</div>
+                  <h4 class="timeline-role">Web Development Intern</h4>
+                  <h5 class="timeline-company"><i class="fa-solid fa-building"></i> Academy of Skill Development / UGCPL</h5>
+                  
+                  <ul class="timeline-bullets">
+                    <li>Developed an e-commerce platform for purchasing books across multiple genres with search, filtering, cart, ordering, and reviews.</li>
+                    <li>Built category and book-related pages integrated directly with a MySQL relational database.</li>
+                    <li>Handled major portions of frontend architecture and database integrations with high code reliability.</li>
+                    <li>Strengthened leadership, teamwork, problem-solving, and production project implementation practices.</li>
+                  </ul>
+
+                  <div class="timeline-tech-pills">
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>JavaScript</span>
+                    <span>HTML5/CSS3</span>
+                    <span>E-Commerce</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EDUCATION -->
+          <div class="timeline-column" id="education">
+            <div class="column-header">
+              <div class="col-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <h3>Academic Journey</h3>
+            </div>
+
+            <div class="timeline-list">
+              <!-- MCA -->
+              <div class="timeline-item">
+                <div class="timeline-marker marker-purple"></div>
+                <div class="timeline-content glass-card">
+                  <div class="timeline-badge-date">2026 &ndash; 2028</div>
+                  <h4 class="timeline-role">Master of Computer Applications (MCA)</h4>
+                  <h5 class="timeline-company"><i class="fa-solid fa-university"></i> SRM Institute of Science and Technology, Kattankulathur</h5>
+                  <p class="timeline-specialization">
+                    <i class="fa-solid fa-sparkles text-purple"></i> <strong>Specialization:</strong> Generative AI
+                  </p>
+                  <p class="timeline-desc">
+                    Pursuing advanced studies in Generative Artificial Intelligence, neural architectures, deep learning fundamentals, and enterprise software engineering.
+                  </p>
+                </div>
+              </div>
+
+              <!-- BCA -->
+              <div class="timeline-item">
+                <div class="timeline-marker marker-blue"></div>
+                <div class="timeline-content glass-card">
+                  <div class="timeline-badge-date">2023 &ndash; 2026</div>
+                  <h4 class="timeline-role">Bachelor of Computer Applications (BCA)</h4>
+                  <h5 class="timeline-company"><i class="fa-solid fa-university"></i> Sarala Birla University, Ranchi</h5>
+                  <p class="timeline-desc">
+                    Comprehensive study of Computer Science fundamentals: Core Java, Object-Oriented Programming, Data Structures &amp; Algorithms, Database Management Systems (DBMS), Operating Systems, and Computer Networks.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HACKATHONS & INTERESTS HIGHLIGHT -->
+        <div class="extra-highlights-grid">
+          <div class="highlight-box glass-card">
+            <div class="highlight-icon"><i class="fa-solid fa-trophy"></i></div>
+            <div class="highlight-text">
+              <h4>Hackathons &amp; Challenges</h4>
+              <p>Active participant in intercollegiate hackathons, algorithmic dev sprints, and rapid prototyping competitions.</p>
+            </div>
+          </div>
+
+          <div class="highlight-box glass-card">
+            <div class="highlight-icon"><i class="fa-solid fa-clapperboard"></i></div>
+            <div class="highlight-text">
+              <h4>Creative Media &amp; Editing</h4>
+              <p>Skilled in video editing and multimedia storytelling, combining creative vision with technical precision.</p>
+            </div>
+          </div>
+
+          <div class="highlight-box glass-card">
+            <div class="highlight-icon"><i class="fa-solid fa-compass"></i></div>
+            <div class="highlight-text">
+              <h4>Continuous Learning</h4>
+              <p>Constantly exploring emerging AI models, LLM agents, cloud-native deployments, and modern developer tooling.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & GET IN TOUCH -->
+    <section id="contact" class="section-padding contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">CONNECT</span>
+          <h2 class="section-title">Let's Build Something <span class="gradient-text">Exceptional Together</span></h2>
+          <p class="section-subtitle">Whether you're looking to collaborate, hire a passionate engineer, or discuss GenAI architectures &mdash; my inbox is open.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Info Column -->
+          <div class="contact-info-panel glass-card">
+            <h3>Contact Information</h3>
+            <p class="contact-lead-text">
+              Feel free to reach out directly via email, phone, or any of my social profiles. I typically respond within 24 hours.
+            </p>
+
+            <div class="contact-cards-list">
+              <a href="mailto:tanishstark1234@gmail.com" class="contact-link-card">
+                <div class="card-icon bg-red-glow"><i class="fa-solid fa-envelope"></i></div>
+                <div class="card-details">
+                  <span class="card-title">Email Directly</span>
+                  <span class="card-value">tanishstark1234@gmail.com</span>
+                </div>
+                <div class="card-action"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              </a>
+
+              <a href="tel:+919709381583" class="contact-link-card">
+                <div class="card-icon bg-green-glow"><i class="fa-solid fa-phone"></i></div>
+                <div class="card-details">
+                  <span class="card-title">Phone / WhatsApp</span>
+                  <span class="card-value">+91 9709381583</span>
+                </div>
+                <div class="card-action"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+              </a>
+
+              <div class="contact-link-card non-interactive">
+                <div class="card-icon bg-blue-glow"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="card-details">
+                  <span class="card-title">Location</span>
+                  <span class="card-value">Chennai, Tamil Nadu, India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links-block">
+              <h4>Social Profiles &amp; Repositories</h4>
+              <div class="social-pills">
+                <a href="https://github.com/tanishstark" target="_blank" rel="noopener noreferrer" class="social-pill">
+                  <i class="fa-brands fa-github"></i>
+                  <span>github/tanishstark</span>
+                </a>
+                <a href="https://www.linkedin.com/in/tanish-kumar-7079a6412/" target="_blank" rel="noopener noreferrer" class="social-pill">
+                  <i class="fa-brands fa-linkedin"></i>
+                  <span>in/tanish-kumar-7079a6412</span>
+                </a>
+                <a href="https://vercel.com/tanishstark1234-8024s-projects" target="_blank" rel="noopener noreferrer" class="social-pill">
+                  <i class="fa-solid fa-cloud"></i>
+                  <span>Vercel Projects</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-panel glass-card">
+            <h3>Send a Direct Message</h3>
+            <form id="portfolio-contact-form" class="custom-form">
+              <div class="form-group">
+                <label for="contact-name">Your Full Name <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-user input-icon"></i>
+                  <input type="text" id="contact-name" name="name" placeholder="e.g. John Doe" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Your Email Address <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-envelope input-icon"></i>
+                  <input type="email" id="contact-email" name="email" placeholder="e.g. john@example.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-heading input-icon"></i>
+                  <input type="text" id="contact-subject" name="subject" placeholder="Project collaboration / Job inquiry" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message <span class="required">*</span></label>
+                <textarea id="contact-message" name="message" rows="5" placeholder="Hi Tanish, I was impressed by your portfolio and would like to discuss..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="contact-submit-btn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-symbol">&lt;TK /&gt;</span>
+          <span class="logo-text">Tanish<span class="gradient-text">.dev</span></span>
+        </a>
+        <p>Full-Stack Engineer &bull; Generative AI Specialist &bull; MCA Scholar</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/tanishstark" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/tanish-kumar-7079a6412/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://vercel.com/tanishstark1234-8024s-projects" target="_blank" rel="noopener noreferrer">Vercel</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Tanish Kumar. Crafted with precision for high-performance deployment on <strong>Vercel</strong>.</p>
+        <div class="footer-badges">
+          <span class="footer-status-pill"><i class="fa-solid fa-bolt"></i> Fast &amp; Accessible</span>
+          <span class="footer-status-pill"><i class="fa-brands fa-github"></i> Open Source</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BACK TO TOP BUTTON -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Scroll back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- PROJECT DEEP DIVE MODAL -->
+  <div class="modal-backdrop" id="project-modal">
+    <div class="modal-dialog glass-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Dynamic Content Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
